@@ -302,11 +302,6 @@ class quantum:
     def time_Wigner_Seitz_radius(self):
         Wigner_Seitz_radius(1e29 * u.m**-3)
 
-    def time_chemical_potential(self):
-        chemical_potential(n_e=1e21*u.cm**-3,
-                           T=11000*u.K)
-
-
 class relativity:
     """
     Benchmark that times the performance of functions from
