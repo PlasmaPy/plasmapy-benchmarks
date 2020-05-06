@@ -11,8 +11,8 @@ try:
         integer_charge,
         reduced_mass,
     )
-except ImportError:
-    from plasmapy.particles import (
+except ModuleNotFoundError:
+    from plasmapy.atomic import (
         known_isotopes,
         common_isotopes,
         stable_isotopes,
