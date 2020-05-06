@@ -2,14 +2,24 @@
 
 import astropy.constants as const
 import astropy.units as u
-from plasmapy.atomic import (
-    known_isotopes,
-    common_isotopes,
-    stable_isotopes,
-    isotopic_abundance,
-    integer_charge,
-    reduced_mass,
-)
+try:
+    from plasmapy.particles import (
+        known_isotopes,
+        common_isotopes,
+        stable_isotopes,
+        isotopic_abundance,
+        integer_charge,
+        reduced_mass,
+    )
+except ImportError:
+    from plasmapy.particles import (
+        known_isotopes,
+        common_isotopes,
+        stable_isotopes,
+        isotopic_abundance,
+        integer_charge,
+        reduced_mass,
+    )
 
 
 class Atomic:
