@@ -2,65 +2,126 @@
 
 import astropy.constants as const
 import astropy.units as u
+
 from numpy import pi
-from plasmapy.formulary import parameters
-
-#For dielectric class
-from plasmapy.formulary import (
-    cold_plasma_permittivity_SDP,
-    cold_plasma_permittivity_LRP,
-    permittivity_1D_Maxwellian
-)
-
-#For dimensionless class
-from plasmapy.formulary.dimensionless import quantum_theta, beta
 
 
-#For distribution class
-from plasmapy.formulary import (
-    Maxwellian_1D,
-    Maxwellian_velocity_2D,
-    Maxwellian_velocity_3D,
-    Maxwellian_speed_1D,
-    Maxwellian_speed_2D,
-    Maxwellian_speed_3D,
-    kappa_velocity_1D,
-    kappa_velocity_3D
-)
+try:
+    #For dielectric class
+    from plasmapy.physics import (
+        cold_plasma_permittivity_SDP,
+        cold_plasma_permittivity_LRP,
+        permittivity_1D_Maxwellian
+    )
 
-#For parameters class
-from plasmapy.formulary.parameters import (
-    mass_density,
-    Alfven_speed,
-    ion_sound_speed,
-    thermal_speed,
-    thermal_pressure,
-    kappa_thermal_speed,
-    Hall_parameter,
-    gyrofrequency,
-    gyroradius,
-    plasma_frequency,
-    Debye_length,
-    Debye_number,
-    inertial_length,
-    magnetic_pressure,
-    magnetic_energy_density,
-    upper_hybrid_frequency,
-    lower_hybrid_frequency,
-)
+    #For dimensionless class
+    from plasmapy.physics.dimensionless import quantum_theta, beta
 
-#For quantum class
-from plasmapy.formulary import(
-    deBroglie_wavelength,
-    thermal_deBroglie_wavelength,
-    Fermi_energy,
-    Thomas_Fermi_length,
-    Wigner_Seitz_radius,
-    chemical_potential,
-)
 
-#For relativity class
-from plasmapy.formulary import Lorentz_factor
+    #For distribution class
+    from plasmapy.physics import (
+        Maxwellian_1D,
+        Maxwellian_velocity_2D,
+        Maxwellian_velocity_3D,
+        Maxwellian_speed_1D,
+        Maxwellian_speed_2D,
+        Maxwellian_speed_3D,
+        kappa_velocity_1D,
+        kappa_velocity_3D
+    )
+
+    #For parameters class
+    from plasmapy.physics.parameters import (
+        mass_density,
+        Alfven_speed,
+        ion_sound_speed,
+        thermal_speed,
+        thermal_pressure,
+        kappa_thermal_speed,
+        Hall_parameter,
+        gyrofrequency,
+        gyroradius,
+        plasma_frequency,
+        Debye_length,
+        Debye_number,
+        inertial_length,
+        magnetic_pressure,
+        magnetic_energy_density,
+        upper_hybrid_frequency,
+        lower_hybrid_frequency,
+    )
+
+    #For quantum class
+    from plasmapy.physics import(
+        deBroglie_wavelength,
+        thermal_deBroglie_wavelength,
+        Fermi_energy,
+        Thomas_Fermi_length,
+        Wigner_Seitz_radius,
+        chemical_potential,
+    )
+
+    #For relativity class
+    from plasmapy.physics import Lorentz_factor
+except ImportError:
+    from plasmapy.formulary import parameters
+
+    #For dielectric class
+    from plasmapy.formulary import (
+        cold_plasma_permittivity_SDP,
+        cold_plasma_permittivity_LRP,
+        permittivity_1D_Maxwellian
+    )
+
+    #For dimensionless class
+    from plasmapy.formulary.dimensionless import quantum_theta, beta
+
+
+    #For distribution class
+    from plasmapy.formulary import (
+        Maxwellian_1D,
+        Maxwellian_velocity_2D,
+        Maxwellian_velocity_3D,
+        Maxwellian_speed_1D,
+        Maxwellian_speed_2D,
+        Maxwellian_speed_3D,
+        kappa_velocity_1D,
+        kappa_velocity_3D
+    )
+
+    #For parameters class
+    from plasmapy.formulary.parameters import (
+        mass_density,
+        Alfven_speed,
+        ion_sound_speed,
+        thermal_speed,
+        thermal_pressure,
+        kappa_thermal_speed,
+        Hall_parameter,
+        gyrofrequency,
+        gyroradius,
+        plasma_frequency,
+        Debye_length,
+        Debye_number,
+        inertial_length,
+        magnetic_pressure,
+        magnetic_energy_density,
+        upper_hybrid_frequency,
+        lower_hybrid_frequency,
+    )
+
+    #For quantum class
+    from plasmapy.formulary import(
+        deBroglie_wavelength,
+        thermal_deBroglie_wavelength,
+        Fermi_energy,
+        Thomas_Fermi_length,
+        Wigner_Seitz_radius,
+        chemical_potential,
+    )
+    #For relativity class
+    from plasmapy.formulary.relativity import Lorentz_factor
+
 
 
 class dielectric:
